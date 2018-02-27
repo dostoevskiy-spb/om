@@ -1,3 +1,6 @@
+<?php use yii\helpers\Html; ?>
+
+<? $this->beginPage() ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,10 +8,15 @@
     <title>Jade Layout Template</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-    <link rel="stylesheet" media="all" href="css/screen.min.css">
+    <link rel="stylesheet" media="all" href="/css/screen.min.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDeIX-qPM-OiBUCqhMfrcfp9tPwQdTZtM"></script>
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
 </head>
 <body>
+<?php $this->beginBody() ?>
+
 <script type="text/javascript">!function (e) {
         function t(o) {
             if (n[o]) return n[o].exports;
@@ -50,7 +58,7 @@
                     t.setAttribute("type", "text/css"), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e, document.getElementsByTagName("head")[0].appendChild(t), window.onFontLoad && window.onFontLoad()
                 }
 
-                var c = window.fonts_href || "css/font.css";
+                var c = window.fonts_href || "/css/font.css";
                 window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n)
             }()
         }, 19: function (e, t) {
@@ -90,7 +98,7 @@
             <div class="map-site-content_content">
                 <div class="block-header-logo_txt">
                     <div class="block-header-logo_logo">Omnicomm Санкт-Петербург</div>
-                    <div class="block-header-logo_dealer" style="height: 30px;"><span class="icon-dealer"></span></div>
+                    <div class="block-header-logo_dealer"><span class="icon-dealer"></span></div>
                 </div>
                 <div class="container-map-menu">
                     <div class="wrapper-menu-map">
@@ -154,7 +162,7 @@
                     <div class="wrapper-telefon-header">
                         <div class="wrapper-telefon-header_title">Отдел продаж</div>
                         <a class="wrapper-telefon-header_link-tel" href="tel:+7 (7212) 980-980">+7 (7212) 980-980</a><a
-                                class="wrapper-telefon-header_link-email" href="mailto:info@omnicomm.kz"><span>info@omnicomm.kz</span></a>
+                                class="wrapper-telefon-header_link-email" href="mailto:info@omnicommspb.ru"><span>info@omnicommspb.ru</span></a>
                     </div>
                     <div class="wrapper-telefon-header">
                         <div class="wrapper-telefon-header_title">Техническая поддержка</div>
@@ -163,12 +171,12 @@
                     </div>
                     <div class="wrapper-adress">Г. Караганда, пр. Бухар-Жырау, 82</div>
                     <div class="wrapper-contact_link-soc"><a class="link-soc" href="#"><img
-                                    src="img/icon-soc/icon-inst-m.png"></a><a class="link-soc" href="#"><img
-                                    src="img/icon-soc/icon-g-pluspng.png"></a><a class="link-soc" href="#"><img
-                                    src="img/icon-soc/icon-vk.png"></a><a class="link-soc" href="#"><img
-                                    src="img/icon-soc/icon-youtube.png"></a><a class="link-soc" href="#"><img
-                                    src="img/icon-soc/icon-face.png"></a><a class="link-soc" href="#"><img
-                                    src="img/icon-soc/icon-twit.png"></a></div>
+                                    src="/img/icon-soc/icon-inst-m.png"></a><a class="link-soc" href="#"><img
+                                    src="/img/icon-soc/icon-g-pluspng.png"></a><a class="link-soc" href="#"><img
+                                    src="/img/icon-soc/icon-vk.png"></a><a class="link-soc" href="#"><img
+                                    src="/img/icon-soc/icon-youtube.png"></a><a class="link-soc" href="#"><img
+                                    src="/img/icon-soc/icon-face.png"></a><a class="link-soc" href="#"><img
+                                    src="/img/icon-soc/icon-twit.png"></a></div>
                 </div>
             </div>
         </div>
@@ -181,7 +189,7 @@
                 <div class="wrapper-telefon-header">
                     <div class="wrapper-telefon-header_title">Отдел продаж</div>
                     <a class="wrapper-telefon-header_link-tel" href="tel:+7 (7212) 980-980">+7 (7212) 980-980</a><a
-                            class="wrapper-telefon-header_link-email" href="mailto:info@omnicomm.kz"><span>info@omnicomm.kz</span></a>
+                            class="wrapper-telefon-header_link-email" href="mailto:info@omnicommspb.ru"><span>info@omnicommspb.ru</span></a>
                 </div>
                 <div class="wrapper-telefon-header">
                     <div class="wrapper-telefon-header_title">Техническая поддержка</div>
@@ -192,15 +200,17 @@
                 <div class="wrapper-adress">Г. Караганда, пр. Бухар-Жырау, 82</div>
             </div>
         </div>
-        <div class="container-top-block_name-comany">Omnicomm kazakstan</div>
-        <div class="container-top-block_icon-mobile"><img src="img/icon-mobile-top.png"></div>
-        <div class="container-top-block_diler"><span class="icon-dealer"><img src="/img/dealer.png" height="30" style="display:inline-block"/></span></div>
+        <div class="container-top-block_name-comany">Omnicomm Санкт-Петербург</div>
+        <div class="container-top-block_icon-mobile"><img src="/img/icon-mobile-top.png"></div>
+        <div class="container-top-block_diler"><span class="icon-dealer"><img src="/img/dealer.png" height="30"
+                                                                              style="display:inline-block"/></span>
+        </div>
     </div>
     <div class="container-wrapper-header">
         <div class="block-header"><a class="block-header-logo" href="#"><img class="block-header-logo_img"
-                                                                             src="img/logo.png" alt="">
+                                                                             src="/img/logo.png" alt="">
                 <div class="block-header-logo_txt">
-                    <div class="block-header-logo_logo">Omnicomm <br> kazakstan</div>
+                    <div class="block-header-logo_logo">Omnicomm <br> Санкт-Петербург</div>
                 </div>
             </a>
             <div class="block-header-menu">
@@ -223,28 +233,28 @@
                             <div class="menu-list-box">
                                 <a class="menu-list-box_link" href="#">
                                     <div class="menu-list-box_link-icon icon-datch-omnicom">
-                                        <img src="/img/innovation.png"/>
+                                        <img src="/img/innovation.png" height="100px"/>
                                     </div>
                                     <div class="menu-list-box_link-txt">Инновационное оборудование</div>
                                 </a>
 
                                 <a class="menu-list-box_link" href="#">
                                     <div class="menu-list-box_link-icon icon-datch-omnicom">
-                                        <img src="/img/fuel-level-sensor.png"/>
+                                        <img src="/img/fuel-level-sensor.png" height="100px"/>
                                     </div>
                                     <div class="menu-list-box_link-txt">Датчики уровня топлива Omnicomm LLS</div>
                                 </a>
 
                                 <a class="menu-list-box_link" href="#">
-                                    <div class="menu-list-box_link-icon icon_terminal-omnicom"><img
-                                                src="/img/terminal.png"/>
+                                    <div class="menu-list-box_link-icon icon_terminal-omnicom">
+                                        <img src="/img/terminal.png" height="100px"/>
                                     </div>
                                     <div class="menu-list-box_link-txt">Терминалы Omnicomm</div>
                                 </a>
 
                                 <a class="menu-list-box_link" href="#">
-                                    <div class="menu-list-box_link-icon icon_dop-omnicom"><img
-                                                src="/img/additional-equipment.png"/>
+                                    <div class="menu-list-box_link-icon icon_dop-omnicom">
+                                        <img src="/img/additional-equipment.png" height="100px"/>
                                     </div>
                                     <div class="menu-list-box_link-txt">Дополнительное оборудование Omnicomm</div>
                                 </a>
@@ -274,26 +284,7 @@
                 <div class="block-scroll-tel"><a href="#">+7 (7212) 980-980</a></div>
             </div>
             <a class="block-map-site js-search-open-map-site" href="javascript:;">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 15">
-                    <style type="text/css">.st0 {
-                            fill: #ffffff;
-                        }</style>
-                    <g>
-                    </g>
-                    <g>
-                        <g id="svg_1">
-                            <path id="svg_2"
-                                  d="m26.5,0l-26.2,0c-0.2,0 -0.3,0.1 -0.3,0.3l0,1.5c0,0.1 0.1,0.2 0.3,0.2l26.3,0c0.1,0 0.3,-0.1 0.3,-0.3l0,-1.4c-0.1,-0.2 -0.2,-0.3 -0.4,-0.3z"
-                                  class="st0"/>
-                            <path id="svg_3"
-                                  d="m26.5,5.1l-26.2,0c-0.2,0 -0.3,0.1 -0.3,0.2l0,1.5c0,0.2 0.1,0.3 0.3,0.3l26.3,0c0.1,0 0.3,-0.1 0.3,-0.3l0,-1.5c-0.1,-0.1 -0.2,-0.2 -0.4,-0.2z"
-                                  class="st0"/>
-                            <path id="svg_4"
-                                  d="m26.5,10.1l-26.2,0c-0.1,0 -0.3,0.1 -0.3,0.3l0,1.5c0,0.1 0.1,0.3 0.3,0.3l26.3,0c0.1,0 0.3,-0.1 0.3,-0.3l0,-1.5c-0.1,-0.2 -0.2,-0.3 -0.4,-0.3z"
-                                  class="st0"/>
-                        </g>
-                    </g>
-                </svg>
+                <img src="/img/icon-sandwich.png"/>
             </a>
         </div>
     </div>
@@ -324,46 +315,31 @@
             <div class="footer-wrapper-contact-info">
                 <div class="footer-wrapper-contact_title">Контактная информация</div>
                 <a class="link_tel" href="tel:+7 7212 980-98">+7 (7212) 980-980</a><a class="link_email"
-                                                                                      href="mailto:info@omnicomm.kz"><span>info@omnicomm.kz</span></a>
+                                                                                      href="mailto:info@omnicommspb.ru"><span>info@omnicommspb.ru</span></a>
                 <div class="footer-wrapper-contact_adress">Г. Караганда, пр. Бухар-Жырау, 82</div>
                 <div class="footer-wrapper-contact_link-soc"><a class="link-soc" href="#"><img
-                                src="img/icon-soc/icon-inst.png"></a><a class="link-soc" href="#"><img
-                                src="img/icon-soc/icon-g-pluspng.png"></a><a class="link-soc" href="#"><img
-                                src="img/icon-soc/icon-vk.png"></a><a class="link-soc" href="#"><img
-                                src="img/icon-soc/icon-youtube.png"></a><a class="link-soc" href="#"><img
-                                src="img/icon-soc/icon-face.png"></a><a class="link-soc" href="#"><img
-                                src="img/icon-soc/icon-twit.png"></a></div>
+                                src="/img/icon-soc/icon-inst.png"></a><a class="link-soc" href="#"><img
+                                src="/img/icon-soc/icon-g-pluspng.png"></a><a class="link-soc" href="#"><img
+                                src="/img/icon-soc/icon-vk.png"></a><a class="link-soc" href="#"><img
+                                src="/img/icon-soc/icon-youtube.png"></a><a class="link-soc" href="#"><img
+                                src="/img/icon-soc/icon-face.png"></a><a class="link-soc" href="#"><img
+                                src="/img/icon-soc/icon-twit.png"></a></div>
             </div>
         </div>
         <div class="footer-wrapper-row">
             <div class="footer-wrapper-bottom">
                 <div class="footer-wrapper_cop">© 2017, Omnicomm</div>
                 <div class="footer-wrapper_logo-dealer">
-                    <div class="footer-wrapper_logo">Omnicomm kazakstan</div>
-                    <div class="footer-wrapper_dealer"><span class="icon-dealer"><svg width="30" height="30"
-                                                                                      xmlns="http://www.w3.org/2000/svg">
-<style type="text/css">.st0 {
-        fill: #F64224;
-    }</style>
-<g>
-<path id="svg_1"
-      d="m15,0c-8.3,0 -15,6.7 -15,15s6.7,15 15,15s15,-6.7 15,-15s-6.7,-15 -15,-15zm5.5,22.9l-5.5,-2.9l-5.5,2.9l1.1,-6.2l-4.6,-4.3l6.2,-0.9l2.8,-5.6l2.8,5.6l6.2,0.9l-4.5,4.4l1,6.1z"
-      class="st0"/>
-</g>
-</svg></span><a href="#">Золотой <br> дилер</a></div>
+                    <div class="footer-wrapper_logo">Omnicomm Санкт-Петербург</div>
+                    <div class="footer-wrapper_dealer"><span class="icon-dealer"><img src="/img/dealer.png"/></span>
+                    </div>
                 </div>
                 <div class="footer-wrapper_map-site"><a href="#">
                         <div class="icon-map-site">
-                            <svg width="17.5" height="15" xmlns="http://www.w3.org/2000/svg">
-                                <g>
-                                    <path class="st0" id="svg_1"
-                                          d="m17.5,10.9l0,3.1c0,0.3 -0.1,0.5 -0.3,0.7s-0.4,0.3 -0.6,0.3l-3.1,0c-0.3,0 -0.5,-0.1 -0.7,-0.3s-0.3,-0.4 -0.3,-0.7l0,-3.1c0,-0.3 0.1,-0.5 0.3,-0.7s0.4,-0.3 0.7,-0.3l0.9,0l0,-1.8l-5,0l0,1.9l0.9,0c0.3,0 0.5,0.1 0.7,0.3s0.3,0.4 0.3,0.7l0,3.1c0,0.3 -0.1,0.5 -0.3,0.7s-0.4,0.2 -0.7,0.2l-3.1,0c-0.3,0 -0.5,-0.1 -0.7,-0.3s-0.3,-0.4 -0.3,-0.7l0,-3.1c0,-0.3 0.1,-0.5 0.3,-0.7s0.4,-0.2 0.7,-0.2l0.9,0l0,-1.9l-5,0l0,1.9l0.9,0c0.3,0 0.5,0.1 0.7,0.3s0.3,0.4 0.3,0.6l0,3.1c0,0.3 -0.1,0.5 -0.3,0.7s-0.4,0.3 -0.6,0.3l-3.2,0c-0.3,0 -0.5,-0.1 -0.7,-0.3s-0.2,-0.4 -0.2,-0.6l0,-3.1c0,-0.3 0.1,-0.5 0.3,-0.7s0.4,-0.3 0.6,-0.3l0.9,0l0,-1.9c0,-0.3 0.1,-0.6 0.4,-0.9s0.5,-0.4 0.9,-0.4l5,0l0,-1.8l-0.9,0c-0.3,0 -0.5,-0.1 -0.7,-0.3s-0.2,-0.4 -0.2,-0.6l0,-3.2c0,-0.3 0.1,-0.5 0.3,-0.7s0.3,-0.2 0.6,-0.2l3.1,0c0.3,0 0.5,0.1 0.7,0.3s0.3,0.4 0.3,0.7l0,3.1c0,0.3 -0.1,0.5 -0.3,0.7s-0.4,0.2 -0.7,0.2l-0.9,0l0,1.9l5,0c0.3,0 0.6,0.1 0.9,0.4s0.4,0.5 0.4,0.9l0,1.8l0.9,0c0.3,0 0.5,0.1 0.7,0.3s0.2,0.4 0.2,0.6z"/>
-                                </g>
-                            </svg>
+                            <img src="/img/sitemap.png"/>
                         </div>
                         <div class="txt">Карта сайта</div>
                     </a></div>
-                <div class="footer-wrapper_developer"><a href="#">Разработка сайта:<span>FLEX.MEDIA</span></a></div>
             </div>
         </div>
     </div>
@@ -617,7 +593,9 @@
         </div>
     </form>
 </div>
-<script src="js/lib.min.js"></script>
-<script src="js/common.min.js"></script>
+<script src="/js/lib.min.js"></script>
+<script src="/js/common.min.js"></script>
+<?php $this->endBody() ?>
 </body>
 </html>
+<?php $this->endPage() ?>

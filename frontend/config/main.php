@@ -41,6 +41,7 @@ return [
             'showScriptName'  => false,
             'rules'           => [
                 'pages/<page:[\w-]+>' => 'pages/default/index',
+                '<module:\w+>/<controller:\w+>/<action:[0-9a-zA-Z_\-]+>/<id:\d+>' => '<module>/<controller>/<action>',
             ],
         ],
     ],

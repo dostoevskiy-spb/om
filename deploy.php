@@ -16,7 +16,7 @@ set('repository', 'git@github.com:dostoevskiy-spb/om.git');
 add('shared_files', []);
 add('shared_dirs', ['vendor']);
 
-// Writable dirs by web server 
+// Writable dirs by web server Сёдня?
 add('writable_dirs', []);
 
 
