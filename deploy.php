@@ -31,6 +31,13 @@ task('build', function () {
 //    run('cd {{release_path}} && build');
 });
 
+desc('Restart PHP-FPM service');
+task('php-fpm:restart', function () {
+    // The user must have rights for restart service
+    // /etc/sudoers: username ALL=NOPASSWD:/bin/systemctl restart php-fpm.service
+    run('sudo /usr/sbin/service php7.0-fpm restart');
+});
+
 /**
  * Main task
  */
@@ -51,4 +58,5 @@ task('deploy', [
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
+after('deploy:symlink', 'php-fpm:restart');
 
