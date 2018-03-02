@@ -1,6 +1,9 @@
-<?php use yii\helpers\Html; ?>
+<?php use frontend\assets\AppAsset;
+use yii\helpers\Html; ?>
 
-<? $this->beginPage() ?>
+<? $this->beginPage();
+AppAsset::register($this);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -97,8 +100,8 @@
             </div>
             <div class="map-site-content_content">
                 <div class="block-header-logo_txt">
-                    <div class="block-header-logo_logo">Omnicomm Санкт-Петербург</div>
                     <div class="block-header-logo_dealer"><span class="icon-dealer"></span></div>
+                    <div class="block-header-logo_logo">Omnicomm Санкт-Петербург</div>
                 </div>
                 <div class="container-map-menu">
                     <div class="wrapper-menu-map">
@@ -161,15 +164,15 @@
                 <div class="container-telefon-menu">
                     <div class="wrapper-telefon-header">
                         <div class="wrapper-telefon-header_title">Отдел продаж</div>
-                        <a class="wrapper-telefon-header_link-tel" href="tel:+7 (7212) 980-980">+7 (7212) 980-980</a><a
+                        <a class="wrapper-telefon-header_link-tel" href="tel:8 800 250 50 19">8 800 250 50 19</a><a
                                 class="wrapper-telefon-header_link-email" href="mailto:info@omnicommspb.ru"><span>info@omnicommspb.ru</span></a>
                     </div>
                     <div class="wrapper-telefon-header">
                         <div class="wrapper-telefon-header_title">Техническая поддержка</div>
-                        <a class="wrapper-telefon-header_link-tel" href="tel:+7 (7212) 980-101">+7 (7212) 980-101</a><a
-                                class="wrapper-telefon-header_link-email" href="mailto:support@omnicomm.kz"><span>ssupport@omnicomm.kz</span></a>
+                        <a class="wrapper-telefon-header_link-tel" href="tel:8 800 250 50 19">8 800 250 50 19</a><a
+                                class="wrapper-telefon-header_link-email" href="mailto:support@omnicomm.kz"><span>support@omnicommspb.ru</span></a>
                     </div>
-                    <div class="wrapper-adress">Г. Караганда, пр. Бухар-Жырау, 82</div>
+                    <div class="wrapper-adress">Санкт-Петербург, пер. Дажмбула, д.9 лит Б пом 18н оф 1Е</div>
                     <div class="wrapper-contact_link-soc"><a class="link-soc" href="#"><img
                                     src="/img/icon-soc/icon-inst-m.png"></a><a class="link-soc" href="#"><img
                                     src="/img/icon-soc/icon-g-pluspng.png"></a><a class="link-soc" href="#"><img
@@ -184,27 +187,27 @@
 </div>
 <div class="container-header-top">
     <div class="container-top-block">
-        <div class="block-header-telefon"><a class="container-top-block_tel" href="tel:+7 7212 980 980"><span>+7 (7212) 980-980</span></a>
+        <div class="block-header-telefon"><a class="container-top-block_tel" href="tel:8 800 250 50 19"><span>8 800 250 50 19</span></a>
             <div class="container-telefon">
                 <div class="wrapper-telefon-header">
                     <div class="wrapper-telefon-header_title">Отдел продаж</div>
-                    <a class="wrapper-telefon-header_link-tel" href="tel:+7 (7212) 980-980">+7 (7212) 980-980</a><a
+                    <a class="wrapper-telefon-header_link-tel" href="tel:8 800 250 50 19">8 800 250 50 19</a><a
                             class="wrapper-telefon-header_link-email" href="mailto:info@omnicommspb.ru"><span>info@omnicommspb.ru</span></a>
                 </div>
                 <div class="wrapper-telefon-header">
                     <div class="wrapper-telefon-header_title">Техническая поддержка</div>
-                    <a class="wrapper-telefon-header_link-tel" href="tel:+7 (7212) 980-101">+7 (7212) 980-101</a><a
-                            class="wrapper-telefon-header_link-email" href="mailto:support@omnicomm.kz"><span>ssupport@omnicomm.kz</span></a>
+                    <a class="wrapper-telefon-header_link-tel" href="tel:8 800 250 50 19">8 800 250 50 19</a><a
+                            class="wrapper-telefon-header_link-email" href="mailto:support@omnicomm.kz"><span>support@omnicommspb.ru</span></a>
                 </div>
                 <a class="pop-up-call-back" href="javascript:;" data-fancybox data-src="#hidden-feedback"><span>Перезвоните мне</span></a>
-                <div class="wrapper-adress">Г. Караганда, пр. Бухар-Жырау, 82</div>
+                <div class="wrapper-adress">Санкт-Петербург, пер. Дажмбула, д.9 лит Б пом 18н оф 1Е</div>
             </div>
         </div>
         <div class="container-top-block_name-comany">Omnicomm Санкт-Петербург</div>
-        <div class="container-top-block_icon-mobile"><img src="/img/icon-mobile-top.png"></div>
         <div class="container-top-block_diler"><span class="icon-dealer"><img src="/img/dealer.png" height="30"
                                                                               style="display:inline-block"/></span>
         </div>
+        <div class="container-top-block_icon-mobile"><img src="/img/icon-mobile-top.png"></div>
     </div>
     <div class="container-wrapper-header">
         <div class="block-header"><a class="block-header-logo" href="#"><img class="block-header-logo_img"
@@ -281,7 +284,7 @@
                         </div>
                     </div>
                 </nav>
-                <div class="block-scroll-tel"><a href="#">+7 (7212) 980-980</a></div>
+                <div class="block-scroll-tel"><a href="#">8 800 250 50 19</a></div>
             </div>
             <a class="block-map-site js-search-open-map-site" href="javascript:;">
                 <img src="/img/icon-sandwich.png"/>
@@ -314,9 +317,9 @@
             </div>
             <div class="footer-wrapper-contact-info">
                 <div class="footer-wrapper-contact_title">Контактная информация</div>
-                <a class="link_tel" href="tel:+7 7212 980-98">+7 (7212) 980-980</a><a class="link_email"
+                <a class="link_tel" href="tel:+7 7212 980-98">8 800 250 50 19</a><a class="link_email"
                                                                                       href="mailto:info@omnicommspb.ru"><span>info@omnicommspb.ru</span></a>
-                <div class="footer-wrapper-contact_adress">Г. Караганда, пр. Бухар-Жырау, 82</div>
+                <div class="footer-wrapper-contact_adress">Санкт-Петербург, пер. Дажмбула, д.9 лит Б пом 18н оф 1Е</div>
                 <div class="footer-wrapper-contact_link-soc"><a class="link-soc" href="#"><img
                                 src="/img/icon-soc/icon-inst.png"></a><a class="link-soc" href="#"><img
                                 src="/img/icon-soc/icon-g-pluspng.png"></a><a class="link-soc" href="#"><img
